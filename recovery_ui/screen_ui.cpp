@@ -578,10 +578,13 @@ void ScreenRecoveryUI::SetColor(UIElement e) const {
       gr_color(95, 194, 255, 255);
       break;
     case UIElement::MENU_SEL_BG_ACTIVE:
-      gr_color(95, 194, 255, 255);
+      if (fastbootd_logo_enabled_)
+        gr_color(95, 114, 255, 255);
+      else
+        gr_color(95, 194, 255, 255);
       break;
     case UIElement::MENU_SEL_FG:
-      gr_color(0xd8, 0xd8, 0xd8, 255);
+      gr_color(0, 0, 0, 255);
       break;
     case UIElement::LOG:
       gr_color(196, 196, 196, 255);
